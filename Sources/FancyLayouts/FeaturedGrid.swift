@@ -5,12 +5,14 @@ import SwiftUI
  If the rest of the views count is more than 2. they are arranged in 2 rows.
  Otherwise they are arranged in 1 row.
 */
-struct FeaturedGrid: Layout {
-	func sizeThatFits(proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) -> CGSize {
+public struct FeaturedGrid: Layout {
+	public init() {}
+
+	public func sizeThatFits(proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) -> CGSize {
 		proposal.replacingUnspecifiedDimensions()
 	}
 
-	func placeSubviews(in bounds: CGRect, proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) {
+	public func placeSubviews(in bounds: CGRect, proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) {
 		let itemCount = subviews.count
 		let rowsCount = itemCount > 3 ? 2 : 1
 		let row1ItemCount = Int(floor(Double(itemCount - 1) / Double(rowsCount)))

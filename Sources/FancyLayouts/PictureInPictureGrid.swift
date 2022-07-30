@@ -4,9 +4,9 @@ import SwiftUI
  The featured view is shown in full screen.
  The rest of the content is shown in a horizontal stack at the bottom of the screen
  */
-struct PictureInPictureGrid<Content: View, Featured:View>: View {
-	 let content: () -> Content
-	 let featured: () -> Featured
+public struct PictureInPictureGrid<Content: View, Featured:View>: View {
+	let content: () -> Content
+	let featured: () -> Featured
 
 	public init(
 		content: @escaping () -> Content,
@@ -16,7 +16,7 @@ struct PictureInPictureGrid<Content: View, Featured:View>: View {
 		self.featured = featured
 	}
 
-	var body: some View {
+	public var body: some View {
 		ZStack(alignment: .bottomLeading) {
 			featured()
 				.ignoresSafeArea()

@@ -1,6 +1,8 @@
 import SwiftUI
 
 public struct JustifiedGrid: Layout {
+	public init() {}
+
 	public func sizeThatFits(proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) -> CGSize {
 		proposal.replacingUnspecifiedDimensions()
 	}
