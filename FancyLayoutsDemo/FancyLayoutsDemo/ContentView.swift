@@ -41,6 +41,11 @@ struct ContentView: View {
 			} featured: {
 				Rectangle().foregroundColor(randomColor)
 			}
+
+		case .stacked:
+			VStack {
+				gridContent
+			}
 		}
 	}
 
