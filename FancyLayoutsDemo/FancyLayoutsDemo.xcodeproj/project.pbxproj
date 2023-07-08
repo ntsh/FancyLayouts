@@ -13,6 +13,7 @@
 		7855A6442895C344003A92ED /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7855A6432895C344003A92ED /* Preview Assets.xcassets */; };
 		7855A64D2895C61A003A92ED /* LayoutType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7855A64C2895C61A003A92ED /* LayoutType.swift */; };
 		7855A6522895C840003A92ED /* FancyLayouts in Frameworks */ = {isa = PBXBuildFile; productRef = 7855A6512895C840003A92ED /* FancyLayouts */; };
+		7878FE692A59F50400D3F6BD /* SampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7878FE682A59F50400D3F6BD /* SampleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		7855A64B2895C406003A92ED /* FancyLayouts */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = FancyLayouts; path = ..; sourceTree = "<group>"; };
 		7855A64C2895C61A003A92ED /* LayoutType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutType.swift; sourceTree = "<group>"; };
 		7855A64F2895C839003A92ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		7878FE682A59F50400D3F6BD /* SampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				7855A63B2895C343003A92ED /* FancyLayoutsDemoApp.swift */,
 				7855A63D2895C343003A92ED /* ContentView.swift */,
 				7855A64C2895C61A003A92ED /* LayoutType.swift */,
+				7878FE682A59F50400D3F6BD /* SampleView.swift */,
 				7855A63F2895C344003A92ED /* Assets.xcassets */,
 				7855A6412895C344003A92ED /* FancyLayoutsDemo.entitlements */,
 				7855A6422895C344003A92ED /* Preview Content */,
@@ -161,6 +164,7 @@
 			files = (
 				7855A63E2895C343003A92ED /* ContentView.swift in Sources */,
 				7855A64D2895C61A003A92ED /* LayoutType.swift in Sources */,
+				7878FE692A59F50400D3F6BD /* SampleView.swift in Sources */,
 				7855A63C2895C343003A92ED /* FancyLayoutsDemoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,7 +304,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 12.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = in.ntsh.FancyLayoutsDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -335,7 +339,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 12.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = in.ntsh.FancyLayoutsDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -29,11 +29,9 @@ struct JustifiedGrid_Previews: PreviewProvider {
 
 	static var previews: some View {
 		JustifiedGrid {
-			ForEach(0 ..< 2) { _ in
-				Rectangle()
-					.foregroundColor(Self.randomColor)
-					.border(Color.black)
-			}
+			Color.red
+			Color.blue
+			Color.yellow
 		}
 		.previewLayout(.fixed(width: 225, height: 400))
 
