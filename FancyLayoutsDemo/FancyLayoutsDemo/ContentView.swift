@@ -6,11 +6,6 @@ struct ContentView: View {
 	@State private var layout = LayoutType.featured
 	@Namespace private var namespace
 
-	private var randomColor: Color {
-		let colors: [Color] = [.yellow, .green, .purple, .blue, .red, .orange, .gray, .brown, .cyan, .mint]
-		return colors.randomElement()!
-	}
-
 	var body: some View {
 		VStack(spacing: 0) {
 			gridView
@@ -24,6 +19,22 @@ struct ContentView: View {
 
 	@ViewBuilder
 	var gridView: some View {
+		let chosenLayout = switch layout {
+			case .featured:
+				AnyLayout(FeaturedGrid())
+			case .justified:
+				AnyLayout(JustifiedGrid())
+			case .stacked:
+				AnyLayout(VStackLayout())
+		}
+
+		chosenLayout {
+			gridContent
+		}
+	}
+
+	@ViewBuilder
+	var gridViewWithoutAnyLayout: some View {
 		switch layout {
 		case .featured:
 			FeaturedGrid {
@@ -35,19 +46,16 @@ struct ContentView: View {
 				gridContent
 			}
 
-		case .pip:
-			PictureInPictureGrid {
+		case .stacked:
+			VStack {
 				gridContent
-			} featured: {
-				Rectangle().foregroundColor(randomColor)
 			}
 		}
 	}
 
 	var gridContent: some View {
-		ForEach(0 ..< count, id: \.self) { index in
-			Rectangle()
-				.foregroundColor(randomColor)
+		return ForEach(0 ..< count, id: \.self) { index in
+			SampleView()
 				.border(Color.black)
 				.id(index)
 				.matchedGeometryEffect(id: index, in: namespace)
