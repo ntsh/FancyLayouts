@@ -26,6 +26,8 @@ struct ContentView: View {
 				AnyLayout(JustifiedGrid())
 			case .stacked:
 				AnyLayout(VStackLayout())
+			case .flexible:
+				AnyLayout(FlexibleStack())
 		}
 
 		chosenLayout {
@@ -48,6 +50,11 @@ struct ContentView: View {
 
 		case .stacked:
 			VStack {
+				gridContent
+			}
+
+		case .flexible:
+			FlexibleStack {
 				gridContent
 			}
 		}
